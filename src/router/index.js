@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '@/views/Home.vue'
+
 
 Vue.use(VueRouter)
 
@@ -14,6 +14,23 @@ const routes = [
     path: '/404',
     name: '404',
     component: () => import('@/views/404.vue')
+  },
+  {
+    path: '/',
+    name: 'Layout',
+    component: () => import('@/layout'),
+    children: [
+      {
+        path: 'list',
+        name: 'List',
+        component: () => import('@/views/ListPage.vue'),
+      },
+      {
+        path: 'map',
+        name: 'Map',
+        component: () => import('@/views/MapPage.vue'),
+      }
+    ]
   },
   {
     path: '/about',

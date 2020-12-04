@@ -6,5 +6,7 @@
 </template>
 
 <script>
+console.log("@/views/404.vue");
+
 export default {};
 </script>
