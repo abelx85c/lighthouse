@@ -32,20 +32,35 @@
               v-model="group"
               active-class="deep-purple--text text--accent-4"
             >
+              <v-app-bar color="cyan" te>
+                <v-list-item-group color="white">
+                  <v-list-item-content>
+                    <v-list-item-title class="title"
+                      >Web Demo</v-list-item-title
+                    >
+                    <v-list-item-subtitle
+                      >Vue Cli + Vuetify</v-list-item-subtitle
+                    >
+                  </v-list-item-content>
+                </v-list-item-group>
+              </v-app-bar>
+
+              <v-divider></v-divider>
+
               <v-list-item>
-                <v-list-item-title>Foo</v-list-item-title>
+                <v-list-item-title>就業服務處清單</v-list-item-title>
               </v-list-item>
 
               <v-list-item>
-                <v-list-item-title>Bar</v-list-item-title>
+                <v-list-item-title>就業服務處地圖</v-list-item-title>
               </v-list-item>
 
               <v-list-item>
-                <v-list-item-title>Fizz</v-list-item-title>
+                <v-list-item-title>關於作者</v-list-item-title>
               </v-list-item>
 
               <v-list-item>
-                <v-list-item-title>Buzz</v-list-item-title>
+                <v-list-item-title>資料來源</v-list-item-title>
               </v-list-item>
             </v-list-item-group>
           </v-list>
@@ -53,9 +68,11 @@
       </v-container>
 
       <v-container>
-        <v-main>
-          <BaseMain />
-        </v-main>
+        <div class="main">
+          <v-main>
+            <BaseMain />
+          </v-main>
+        </div>
       </v-container>
 
       <v-container>
