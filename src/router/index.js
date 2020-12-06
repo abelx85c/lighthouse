@@ -7,7 +7,7 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Layout',
+    name: 'layout',
     component: () => import('@/layout')
   },
   {
@@ -17,28 +17,25 @@ const routes = [
   },
   {
     path: '/',
-    name: 'Layout',
+    name: 'layout',
     component: () => import('@/layout'),
     children: [
       {
+        path: 'lighthouse',
+        name: 'lighthouse',
+        component: () => import('@/views/ListPage.vue'),
+      },
+      {
         path: 'list',
-        name: 'List',
+        name: 'list',
         component: () => import('@/views/ListPage.vue'),
       },
       {
         path: 'map',
-        name: 'Map',
+        name: 'map',
         component: () => import('@/views/MapPage.vue'),
       }
     ]
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
     path: '*',
