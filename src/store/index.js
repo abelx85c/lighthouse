@@ -17,6 +17,10 @@ export default new Vuex.Store({
       state.contents = data.map(item => {
         let temp = {
           name: item['據點名稱'],
+          address: item['地址'],
+          phone: item['連絡電話'],
+          longitude: item['Y坐標'],//經度
+          latitude: item['X坐標'],//緯度
         }
         //delete item['據點名稱']
         return temp

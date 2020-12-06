@@ -2,6 +2,8 @@
   <ol>
     <li v-for="item in contents" :key="item.name">
       {{ item.name }}
+      {{ item.address }}
+      {{ item.phone }}
     </li>
   </ol>
 </template>
