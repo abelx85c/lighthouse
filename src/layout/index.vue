@@ -64,18 +64,12 @@
 <script>
 console.log("@/layout/index.vue");
 
-//import BaseHeader from "@/layout/BaseHeader.vue";
-//import BaseAside from "@/layout/BaseAside.vue";
 import BaseMain from "@/layout/BaseMain.vue";
-// import BaseFooter from "@/layout/BaseFooter.vue";
 
 export default {
   name: "Layout",
   components: {
-    //BaseHeader,
-    // BaseAside,
     BaseMain,
-    // BaseFooter,
   },
 
   data: () => ({
