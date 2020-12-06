@@ -6,22 +6,17 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    name: 'Layout',
-    component: () => import('@/layout')
-  },
-  {
     path: '/404',
     name: '404',
     component: () => import('@/views/404.vue')
   },
   {
     path: '/',
-    name: 'Layout',
+    name: 'layout',
     component: () => import('@/layout'),
     children: [
       {
-        path: 'lighthouse',
+        path: '/lighthouse',
         name: 'lighthouse',
         component: () => import('@/views/ListPage.vue'),
       },
