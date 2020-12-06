@@ -7,7 +7,7 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'layout',
+    name: 'Layout',
     component: () => import('@/layout')
   },
   {
@@ -17,7 +17,7 @@ const routes = [
   },
   {
     path: '/',
-    name: 'layout',
+    name: 'Layout',
     component: () => import('@/layout'),
     children: [
       {
