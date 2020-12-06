@@ -41,5 +41,16 @@ export default {
       },
     ],
   }),
+
+  mounted() {
+    // this.$store.dispatch("CONTENTS_READ");
+    this.axios
+      .get(
+        "https://datacenter.taichung.gov.tw/swagger/OpenData/bbddaa1a-68e2-4e9a-8a06-48fa59c85bce"
+      )
+      .then((res) => {
+        console.log(res);
+      });
+  },
 };
 </script>
