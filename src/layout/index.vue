@@ -59,7 +59,7 @@
       </v-container>
 
       <v-container>
-        <v-footer padless color="deep-purple accent-4">
+        <v-footer fixed padless color="deep-purple accent-4">
           <v-col class="text-center" cols="12">
             {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
           </v-col>
