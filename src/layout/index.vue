@@ -26,10 +26,7 @@
 
         <v-navigation-drawer v-model="drawer" fixed left temporary prominent>
           <v-list nav dense>
-            <v-list-item-group
-              v-model="group"
-              active-class="text-decoration-none"
-            >
+            <v-list-item-group v-model="group">
               <v-app-bar class="text-center" color="cyan" dark>
                 <v-list-item-group>
                   <v-list-item-content>
@@ -45,21 +42,27 @@
 
               <v-divider></v-divider>
 
-              <v-list-item>
-                <v-list-item-title>就業服務處清單</v-list-item-title>
-              </v-list-item>
+              <v-list-item-group
+                v-model="selectedItem"
+                color="primary"
+                class="text-decoration-none"
+              >
+                <v-list-item>
+                  <v-list-item-title>就業服務處清單</v-list-item-title>
+                </v-list-item>
 
-              <v-list-item>
-                <v-list-item-title>就業服務處地圖</v-list-item-title>
-              </v-list-item>
+                <v-list-item>
+                  <v-list-item-title>就業服務處地圖</v-list-item-title>
+                </v-list-item>
 
-              <v-list-item>
-                <v-list-item-title>關於作者</v-list-item-title>
-              </v-list-item>
+                <v-list-item>
+                  <v-list-item-title>關於作者</v-list-item-title>
+                </v-list-item>
 
-              <v-list-item>
-                <v-list-item-title>資料來源</v-list-item-title>
-              </v-list-item>
+                <v-list-item>
+                  <v-list-item-title>資料來源</v-list-item-title>
+                </v-list-item>
+              </v-list-item-group>
             </v-list-item-group>
           </v-list>
         </v-navigation-drawer>
@@ -98,6 +101,7 @@ export default {
   data: () => ({
     drawer: false,
     group: null,
+    selectedItem: 0,
   }),
 
   watch: {
