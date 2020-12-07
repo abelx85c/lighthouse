@@ -42,17 +42,17 @@
 
               <v-divider></v-divider>
 
-              <v-list-item-group
-                v-model="selectedItem"
-                color="primary"
-                class="text-decoration-none"
-              >
+              <v-list-item-group v-model="selectedItem" color="primary">
                 <v-list-item>
-                  <v-list-item-title>就業服務處清單</v-list-item-title>
+                  <v-list-item-title>
+                    <router-link to="/list">就業服務處清單</router-link>
+                  </v-list-item-title>
                 </v-list-item>
 
                 <v-list-item>
-                  <v-list-item-title>就業服務處地圖</v-list-item-title>
+                  <v-list-item-title>
+                    <router-link to="/map">就業服務處地圖</router-link>
+                  </v-list-item-title>
                 </v-list-item>
 
                 <v-list-item>
@@ -69,11 +69,9 @@
       </v-container>
 
       <v-container>
-        <div class="main">
-          <v-main>
-            <BaseMain />
-          </v-main>
-        </div>
+        <v-main>
+          <BaseMain />
+        </v-main>
       </v-container>
 
       <v-container>
@@ -119,6 +117,8 @@ export default {
   padding: 0;
   background-color: #fff;
 }
-.main {
+a {
+  color: #000;
+  text-decoration: none;
 }
 </style>
