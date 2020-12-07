@@ -2,9 +2,7 @@
   <div id="app">
     <v-app>
       <v-container>
-        <v-system-bar color="deep-purple darken-3"></v-system-bar>
-
-        <v-app-bar color="deep-purple accent-4" dark prominent>
+        <v-app-bar fixed color="blue" dark>
           <v-app-bar-nav-icon
             @click.stop="drawer = !drawer"
           ></v-app-bar-nav-icon>
@@ -26,20 +24,20 @@
           </v-btn>
         </v-app-bar>
 
-        <v-navigation-drawer v-model="drawer" absolute left temporary>
+        <v-navigation-drawer v-model="drawer" fixed left temporary prominent>
           <v-list nav dense>
             <v-list-item-group
               v-model="group"
-              active-class="deep-purple--text text--accent-4"
+              active-class="text-decoration-none"
             >
-              <v-app-bar color="cyan" te>
-                <v-list-item-group color="white">
+              <v-app-bar class="text-center" color="cyan" dark>
+                <v-list-item-group>
                   <v-list-item-content>
                     <v-list-item-title class="title"
                       >Web Demo</v-list-item-title
                     >
                     <v-list-item-subtitle
-                      >Vue Cli + Vuetify</v-list-item-subtitle
+                      >Vue Cli & Vuetify</v-list-item-subtitle
                     >
                   </v-list-item-content>
                 </v-list-item-group>
@@ -76,9 +74,9 @@
       </v-container>
 
       <v-container>
-        <v-footer fixed padless color="deep-purple accent-4">
-          <v-col class="text-center" cols="12">
-            {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+        <v-footer fixed color="blue" dark prominent>
+          <v-col class="text-center">
+            {{ new Date().getFullYear() }} — <strong>Abel</strong>
           </v-col>
         </v-footer>
       </v-container>
@@ -116,5 +114,7 @@ export default {
   margin: 0;
   padding: 0;
   background-color: #fff;
+}
+.main {
 }
 </style>
