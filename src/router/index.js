@@ -21,14 +21,19 @@ const routes = [
         component: () => import('@/views/ListPage.vue'),
       },
       {
-        path: 'list',
+        path: '/list',
         name: 'list',
         component: () => import('@/views/ListPage.vue'),
       },
       {
-        path: 'map',
+        path: '/map',
         name: 'map',
         component: () => import('@/views/MapPage.vue'),
+      },
+      {
+        path: '/resume',
+        name: 'resume',
+        component: () => import('@/views/ResumePage.vue'),
       }
     ]
   },

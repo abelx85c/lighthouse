@@ -56,7 +56,9 @@
                 </v-list-item>
 
                 <v-list-item>
-                  <v-list-item-title>關於作者</v-list-item-title>
+                  <v-list-item-title>
+                    <router-link to="/resume">關於作者</router-link>
+                  </v-list-item-title>
                 </v-list-item>
 
                 <v-list-item>
