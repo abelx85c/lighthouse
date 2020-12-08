@@ -30,7 +30,7 @@
           left
           temporary
           prominent
-          src="https://cdn.vuetifyjs.com/images/backgrounds/bg-2.jpg"
+          src="@/assets/image/background/sea.jpg"
         >
           <v-list nav dense rounded>
             <v-list-item-group>
@@ -130,7 +130,7 @@ export default {
   background-color: #fff;
 }
 a {
-  color: #fff;
+  color: #666;
   font-weight: bold;
   text-decoration: none;
 }
