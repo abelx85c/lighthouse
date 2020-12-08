@@ -1,9 +1,20 @@
 <template>
-  <h1>@/views/ResumePage</h1>
+  <v-container>
+    <v-main>
+      <ResumeItem />
+      <router-view />
+    </v-main>
+  </v-container>
 </template>
 
 <script>
 console.log("@/views/ResumePage.vue");
 
-export default {};
+import ResumeItem from "@/components/ResumeItem.vue";
+export default {
+  name: "",
+  components: {
+    ResumeItem,
+  },
+};
 </script>

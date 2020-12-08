@@ -20,6 +20,9 @@ export default {
     },
   },
   mounted() {
+    //打API獲取資料
+    this.$store.dispatch("CONTENTS_READ");
+
     // ...
     openStreetMap = L.map("mapid", {
       //中心點設在中興大學
@@ -34,7 +37,7 @@ export default {
       maxZoom: 20,
     }).addTo(openStreetMap);
 
-    this.$store.dispatch("CONTENTS_READ");
+    //設置地圖釘選標記
     this.markMap();
   },
 
