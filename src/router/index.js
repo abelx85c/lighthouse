@@ -14,6 +14,7 @@ const routes = [
     path: '/',
     name: 'layout',
     component: () => import('@/layout'),
+    redirect: '/lighthouse',
     children: [
       {
         path: 'lighthouse',
