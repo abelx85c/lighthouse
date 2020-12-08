@@ -24,8 +24,15 @@
           </v-btn>
         </v-app-bar>
 
-        <v-navigation-drawer v-model="drawer" fixed left temporary prominent>
-          <v-list nav dense>
+        <v-navigation-drawer
+          v-model="drawer"
+          fixed
+          left
+          temporary
+          prominent
+          src="https://cdn.vuetifyjs.com/images/backgrounds/bg-2.jpg"
+        >
+          <v-list nav dense rounded>
             <v-list-item-group>
               <v-app-bar class="text-center" color="cyan" dark>
                 <v-list-item-group>
@@ -44,7 +51,7 @@
 
               <v-list-item-group
                 v-model="group"
-                active-class="deep-purple--text text--accent-4"
+                active-class="pink--text text--accent-4"
               >
                 <v-list-item>
                   <v-list-item-avatar>
@@ -55,7 +62,7 @@
 
                 <v-list-item>
                   <v-list-item-avatar>
-                    <v-icon>mdi-flag</v-icon>
+                    <v-icon>mdi-map-marker</v-icon>
                   </v-list-item-avatar>
                   <router-link to="/map">就業服務處地圖</router-link>
                 </v-list-item>
@@ -69,7 +76,7 @@
 
                 <v-list-item>
                   <v-list-item-avatar>
-                    <v-icon>mdi-ticket</v-icon>
+                    <v-icon>mdi-flag</v-icon>
                   </v-list-item-avatar>
                   <router-link to="/resume">關於作者</router-link>
                 </v-list-item>
