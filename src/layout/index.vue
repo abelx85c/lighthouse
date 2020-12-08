@@ -47,7 +47,7 @@
                 </v-list-item-group>
               </v-app-bar>
 
-              <!-- <v-divider></v-divider> -->
+              <!-- menu list 的 router link 要按到文字上 頁面才會跳轉 -->
 
               <v-list-item-group
                 v-model="group"
