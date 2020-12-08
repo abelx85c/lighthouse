@@ -26,43 +26,42 @@
 
         <v-navigation-drawer v-model="drawer" fixed left temporary prominent>
           <v-list nav dense>
-            <v-list-item-group v-model="group">
-              <!-- <v-app-bar class="text-center" color="cyan" dark> -->
-              <!-- <v-list-item-group> -->
-              <!-- <v-list-item-content> -->
-              <!-- <v-list-item-title class="title">Web Demo</v-list-item-title>
-              <v-list-item-subtitle>Vue Cli & Vuetify</v-list-item-subtitle> -->
-              <!-- </v-list-item-content> -->
-              <!-- </v-list-item-group> -->
-              <!-- </v-app-bar> -->
+            <v-list-item-group>
+              <v-app-bar class="text-center" color="cyan" dark>
+                <v-list-item-group>
+                  <v-list-item-content>
+                    <v-list-item-title class="title"
+                      >Web Demo</v-list-item-title
+                    >
+                    <v-list-item-subtitle
+                      >Vue Cli & Vuetify</v-list-item-subtitle
+                    >
+                  </v-list-item-content>
+                </v-list-item-group>
+              </v-app-bar>
 
               <!-- <v-divider></v-divider> -->
 
-              <!-- <v-list-item-group
+              <v-list-item-group
+                v-model="group"
                 active-class="deep-purple--text text--accent-4"
-              > -->
-              <v-list-item>
-                <!-- <v-list-item-title> -->
-                <router-link to="/list">就業服務處清單</router-link>
-                <!-- </v-list-item-title> -->
-              </v-list-item>
+              >
+                <v-list-item>
+                  <router-link to="/list">就業服務處清單</router-link>
+                </v-list-item>
 
-              <v-list-item>
-                <!-- <v-list-item-title> -->
-                <router-link to="/map">就業服務處地圖</router-link>
-                <!-- </v-list-item-title> -->
-              </v-list-item>
+                <v-list-item>
+                  <router-link to="/map">就業服務處地圖</router-link>
+                </v-list-item>
 
-              <v-list-item>
-                <!-- <v-list-item-title> -->
-                <router-link to="/resume">關於作者</router-link>
-                <!-- </v-list-item-title> -->
-              </v-list-item>
+                <v-list-item>
+                  <router-link to="/resume">關於作者</router-link>
+                </v-list-item>
 
-              <!-- <v-list-item>
-                <v-list-item-title>資料來源</v-list-item-title>
-              </v-list-item> -->
-              <!-- </v-list-item-group> -->
+                <v-list-item>
+                  <router-link to="/resume">關於作者</router-link>
+                </v-list-item>
+              </v-list-item-group>
             </v-list-item-group>
           </v-list>
         </v-navigation-drawer>
