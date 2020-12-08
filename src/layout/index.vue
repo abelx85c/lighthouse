@@ -90,14 +90,8 @@
 <script>
 console.log("@/layout/index.vue");
 
-//import BaseMain from "@/layout/BaseMain.vue";
-
 export default {
   name: "Layout",
-  components: {
-    //BaseMain,
-  },
-
   data: () => ({
     drawer: false,
     group: null,
