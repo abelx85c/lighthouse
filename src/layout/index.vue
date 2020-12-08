@@ -7,7 +7,7 @@
             @click.stop="drawer = !drawer"
           ></v-app-bar-nav-icon>
 
-          <v-toolbar-title>My files</v-toolbar-title>
+          <v-toolbar-title>{{ pageTitle }}</v-toolbar-title>
 
           <v-spacer></v-spacer>
 
@@ -96,6 +96,7 @@ export default {
     drawer: false,
     group: null,
     selectedItem: 0,
+    pageTitle: "找就業服務處",
   }),
 
   watch: {
