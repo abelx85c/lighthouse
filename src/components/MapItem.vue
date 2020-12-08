@@ -43,8 +43,11 @@ export default {
       //在中興大學設一個標記
       //L.marker([24.123958, 120.677193]).addTo(openStreetMap);
       this.contents.forEach((item) => {
-        //透過經緯度疊加標記
-        L.marker([item.latitude, item.longitude]).addTo(openStreetMap);
+        //透過經緯度標記並點選後嗅出資訊
+        L.marker([item.latitude, item.longitude]).addTo(openStreetMap)
+          .bindPopup(`<p><strong style="font-size: 20px;">${item.name}</strong></p>
+          地址: ${item.address}<br>
+          電話: ${item.phone}<br>`);
       });
     },
   },
