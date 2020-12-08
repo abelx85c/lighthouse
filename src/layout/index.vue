@@ -31,6 +31,7 @@
           temporary
           prominent
           src="@/assets/image/background/sea.jpg"
+          style="z-index: 9999"
         >
           <v-list nav dense rounded>
             <v-list-item-group>
@@ -46,8 +47,6 @@
                   </v-list-item-content>
                 </v-list-item-group>
               </v-app-bar>
-
-              <!-- menu list 的 router link 要按到文字上 頁面才會跳轉 -->
 
               <v-list-item-group
                 v-model="group"
