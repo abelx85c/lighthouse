@@ -130,7 +130,8 @@ export default {
   background-color: #fff;
 }
 a {
-  color: #000;
+  color: #fff;
+  font-weight: bold;
   text-decoration: none;
 }
 </style>
