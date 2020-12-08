@@ -86,11 +86,17 @@
         </v-navigation-drawer>
       </v-container>
 
+      <v-spacer></v-spacer>
+
       <v-container>
-        <v-main>
-          <router-view />
-        </v-main>
+        <div>
+          <v-main>
+            <router-view />
+          </v-main>
+        </div>
       </v-container>
+
+      <v-spacer></v-spacer>
 
       <v-container>
         <v-footer fixed color="blue" dark prominent>
