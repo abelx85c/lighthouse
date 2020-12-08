@@ -16,22 +16,22 @@ const routes = [
     component: () => import('@/layout'),
     children: [
       {
-        path: '/lighthouse',
+        path: 'lighthouse',
         name: 'lighthouse',
         component: () => import('@/views/ListPage.vue'),
       },
       {
-        path: '/list',
+        path: 'list',
         name: 'list',
         component: () => import('@/views/ListPage.vue'),
       },
       {
-        path: '/map',
+        path: 'map',
         name: 'map',
         component: () => import('@/views/MapPage.vue'),
       },
       {
-        path: '/resume',
+        path: 'resume',
         name: 'resume',
         component: () => import('@/views/ResumePage.vue'),
       }

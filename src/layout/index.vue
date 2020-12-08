@@ -72,7 +72,7 @@
 
       <v-container>
         <v-main>
-          <BaseMain />
+          <router-view />
         </v-main>
       </v-container>
 
@@ -90,12 +90,12 @@
 <script>
 console.log("@/layout/index.vue");
 
-import BaseMain from "@/layout/BaseMain.vue";
+//import BaseMain from "@/layout/BaseMain.vue";
 
 export default {
   name: "Layout",
   components: {
-    BaseMain,
+    //BaseMain,
   },
 
   data: () => ({
