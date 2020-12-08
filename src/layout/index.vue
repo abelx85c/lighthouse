@@ -47,18 +47,30 @@
                 active-class="deep-purple--text text--accent-4"
               >
                 <v-list-item>
+                  <v-list-item-avatar>
+                    <v-icon>mdi-home</v-icon>
+                  </v-list-item-avatar>
                   <router-link to="/list">就業服務處清單</router-link>
                 </v-list-item>
 
                 <v-list-item>
+                  <v-list-item-avatar>
+                    <v-icon>mdi-flag</v-icon>
+                  </v-list-item-avatar>
                   <router-link to="/map">就業服務處地圖</router-link>
                 </v-list-item>
 
                 <v-list-item>
+                  <v-list-item-avatar>
+                    <v-icon>mdi-account</v-icon>
+                  </v-list-item-avatar>
                   <router-link to="/resume">關於作者</router-link>
                 </v-list-item>
 
                 <v-list-item>
+                  <v-list-item-avatar>
+                    <v-icon>mdi-ticket</v-icon>
+                  </v-list-item-avatar>
                   <router-link to="/resume">關於作者</router-link>
                 </v-list-item>
               </v-list-item-group>
