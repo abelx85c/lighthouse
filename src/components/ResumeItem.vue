@@ -23,7 +23,7 @@ export default {
     const oIframe = document.getElementById("myFrame");
     const deviceWidth = document.documentElement.clientWidth;
     const deviceHeight = document.documentElement.clientHeight;
-    oIframe.style.width = Number(deviceWidth) - 0 + "px"; //數字是頁面佈局寬度差值 0
+    oIframe.style.width = Number(deviceWidth) - 50 + "px"; //數字是頁面佈局寬度差值 50
     oIframe.style.height = Number(deviceHeight) - 120 + "px"; //數字是頁面佈局高度差 120
   },
   methods() {},
