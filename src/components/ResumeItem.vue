@@ -13,7 +13,7 @@ export default {
   components: {},
   data() {
     return {
-      src: "https://ppzzvf2kvzbqwup7qnfuta-on.drv.tw/www/resume/",
+      src: "https://abelx85c.github.io/resume/",
     };
   },
   mounted() {
