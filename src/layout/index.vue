@@ -77,7 +77,11 @@
                   <v-list-item-avatar>
                     <v-icon>mdi-flag</v-icon>
                   </v-list-item-avatar>
-                  <router-link to="/resume">關於作者</router-link>
+                  <a
+                    href="https://datacenter.taichung.gov.tw/swagger/api-docs/"
+                    target="_blank"
+                    >資料來源</a
+                  >
                 </v-list-item>
               </v-list-item-group>
             </v-list-item-group>
