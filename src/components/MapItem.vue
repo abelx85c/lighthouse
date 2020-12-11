@@ -44,7 +44,7 @@ export default {
 
   methods: {
     markMap() {
-      //自定義marker icon test
+      
       var myIcon = L.icon({
         //內部圖檔無法引用
         //iconUrl: 'src/assets/image/iconleaf-green.png',
@@ -54,13 +54,14 @@ export default {
         iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
         popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
       });
-      L.marker([24.123958, 120.677193], {icon: myIcon}).addTo(openStreetMap);
+      //自定義marker icon test
+      //L.marker([24.123958, 120.677193], {icon: myIcon}).addTo(openStreetMap);
 
       //在中興大學設一個標記
       //L.marker([24.123958, 120.677193]).addTo(openStreetMap);
       this.contents.forEach((item) => {
         //透過經緯度標記並點選後嗅出資訊
-        L.marker([item.latitude, item.longitude]).addTo(openStreetMap)
+        L.marker([item.latitude, item.longitude], {icon: myIcon}).addTo(openStreetMap)
           .bindPopup(`<p><strong style="font-size: 20px;">${item.name}</strong></p>
           地址: ${item.address}<br>
           電話: ${item.phone}<br>`);
