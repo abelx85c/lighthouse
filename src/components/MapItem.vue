@@ -1,6 +1,7 @@
 <template>
-  <div id="mapid"></div>
-  <!-- <h1>@/components/MapItem</h1> -->
+<div>
+    <div id="mapid"></div>
+</div>
 </template>
 
 <script>
@@ -43,6 +44,18 @@ export default {
 
   methods: {
     markMap() {
+      //自定義marker icon test
+      var myIcon = L.icon({
+        //內部圖檔無法引用
+        //iconUrl: 'src/assets/image/iconleaf-green.png',
+        //iconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-green.png',
+        iconUrl:'https://www.flaticon.com/svg/static/icons/svg/61/61637.svg',
+        iconSize:     [50, 50], // size of the icon
+        iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+        popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+      });
+      L.marker([24.123958, 120.677193], {icon: myIcon}).addTo(openStreetMap);
+
       //在中興大學設一個標記
       //L.marker([24.123958, 120.677193]).addTo(openStreetMap);
       this.contents.forEach((item) => {
