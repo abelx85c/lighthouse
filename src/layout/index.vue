@@ -30,7 +30,7 @@
           left
           temporary
           prominent
-          src="@/assets/image/background/sea.jpg"
+          src="@/assets/image/background/kit.jpg"
           style="z-index: 9999"
         >
           <v-list nav dense rounded>
