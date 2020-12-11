@@ -26,7 +26,7 @@ export default {
     oIframe.style.width = Number(deviceWidth) - 50 + "px"; //數字是頁面佈局寬度差值 50
     oIframe.style.height = Number(deviceHeight) - 120 + "px"; //數字是頁面佈局高度差 120
   },
-  methods() {},
+  methods: {},
 };
 </script>
 
