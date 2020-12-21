@@ -62,7 +62,7 @@ export default {
 .wrap {
   vertical-align: middle;
   #mapid {
-    height: 500px;
+    height: 600px;
     // box-sizing: border-box;
   }
 }

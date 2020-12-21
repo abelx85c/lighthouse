@@ -2,7 +2,7 @@
   <div id="app">
     <v-app>
       <v-container>
-        <v-app-bar fixed color="blue" dark style="z-index: 9998">
+        <v-app-bar fixed color="blue" dark style="z-index: 2500">
           <v-app-bar-nav-icon
             @click.stop="drawer = !drawer"
           ></v-app-bar-nav-icon>
@@ -31,7 +31,7 @@
           temporary
           prominent
           src="@/assets/image/background/sea.jpg"
-          style="z-index: 9999"
+          style="z-index: 3000"
         >
           <v-list nav dense rounded>
             <v-list-item-group>
@@ -102,7 +102,7 @@
       <v-spacer></v-spacer>
 
       <v-container>
-        <v-footer fixed color="blue" dark prominent style="z-index: 9998">
+        <v-footer fixed color="blue" dark prominent style="z-index: 2500">
           <v-col class="text-center">
             {{ new Date().getFullYear() }} — <strong>Abel</strong>
           </v-col>
