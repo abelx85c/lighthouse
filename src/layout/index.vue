@@ -2,7 +2,7 @@
   <div id="app">
     <v-app>
       <v-container>
-        <v-app-bar fixed color="blue" dark>
+        <v-app-bar fixed color="blue" dark style="z-index: 9998">
           <v-app-bar-nav-icon
             @click.stop="drawer = !drawer"
           ></v-app-bar-nav-icon>
@@ -102,7 +102,7 @@
       <v-spacer></v-spacer>
 
       <v-container>
-        <v-footer fixed color="blue" dark prominent>
+        <v-footer fixed color="blue" dark prominent style="z-index: 9998">
           <v-col class="text-center">
             {{ new Date().getFullYear() }} — <strong>Abel</strong>
           </v-col>
@@ -131,7 +131,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 #app {
   height: 100%;
   margin: 0;

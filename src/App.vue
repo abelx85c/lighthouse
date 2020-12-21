@@ -14,5 +14,8 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
+// #app {
+//   background-color: #000;
+// }
 </style>
