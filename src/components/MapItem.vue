@@ -1,6 +1,7 @@
 <template>
-  <div id="mapid"></div>
-  <!-- <h1>@/components/MapItem</h1> -->
+  <div class="wrap">
+    <div id="mapid"></div>
+  </div>
 </template>
 
 <script>
@@ -58,7 +59,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#mapid {
-  height: 700px;
+.wrap {
+  vertical-align: middle;
+  #mapid {
+    height: 500px;
+    // box-sizing: border-box;
+  }
 }
 </style>
