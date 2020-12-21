@@ -1,31 +1,32 @@
 <template>
-<div>
-  <v-list>
-    <template v-for="(item, index) in contents">
-      <v-list-item :key="item.name">
-        <v-list-item-content>
-          <v-list-item-title>{{ item.name }}</v-list-item-title>
-          <v-list-item-subtitle>{{ item.address }}</v-list-item-subtitle>
-          <v-list-item-subtitle>{{ item.phone }}</v-list-item-subtitle>
-        </v-list-item-content>
-      </v-list-item>
-      <v-divider v-if="index < contents.length - 1" :key="index"></v-divider>
-    </template>
-  </v-list>
+  <div>
+    <div class="wrap">
+      <div class="list">
+        <v-list>
+          <template v-for="(item, index) in contents">
+            <v-list-item :key="item.name">
+              <v-list-item-content>
+                <v-list-item-title>{{ item.name }}</v-list-item-title>
+                <v-list-item-subtitle>{{ item.address }}</v-list-item-subtitle>
+                <v-list-item-subtitle>{{ item.phone }}</v-list-item-subtitle>
+              </v-list-item-content>
+            </v-list-item>
+            <v-divider
+              v-if="index < contents.length - 1"
+              :key="index"
+            ></v-divider>
+          </template>
+        </v-list>
+      </div>
+    </div>
 
-  <div class="full-screen">
-    <div class="catass">
-      <a href="#" class="catass-close">
-        <img src="@/assets/image/icon/catass.png" alt="">
-      </a>
+    <div class="full-screen">
+      <div class="catass">
+        <img src="@/assets/image/icon/catass.png" alt="" />
+        <a href="#" class="catass-close">X</a>
+      </div>
     </div>
   </div>
-
-  <div class="cathand">
-    <img src="@/assets/image/icon/cathand.png" alt="">
-  </div>
-
-</div>
 </template>
 
 <script>
@@ -33,27 +34,30 @@ console.log("@/component/ListItem.vue");
 
 import $ from "jquery";
 
-$(document).ready(()=>{
-  
-  $('.catass-close').click(()=>{
-    $('.catass').animate({ 
-      right:'-100%',
-    }, 1500); 
-  })
-})
+$(document).ready(() => {
+  $(".catass-close").click(() => {
+    $(".catass").animate(
+      {
+        right: "-100%",
+      },
+      1500
+    );
+  });
+});
 
-
-$(window).scroll(function(){
-  var window_height = $( window ).height();
+$(window).scroll(function () {
+  var window_height = $(window).height();
   var window_scrollTop = $(window).scrollTop();
-  var document_height = $( document ).height();
-  
-  if(window_height + window_scrollTop == document_height){
-    $('.cathand').animate({ 
-      right:'0%',
-    }, 500); 
-  }
+  var document_height = $(document).height();
 
+  if (window_height + window_scrollTop == document_height) {
+    $(".cathand").animate(
+      {
+        right: "0",
+      },
+      500
+    );
+  }
 });
 
 export default {
@@ -70,39 +74,40 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-.full-screen {
-  position: fixed;
-  top:10%;
-  left:0;
-  width:100%;
-  height:100%;
-  margin:0;
-  z-index:10;
-  .catass {
-    height:50%;
-    width:50%; 
-    padding: 0;
-    margin:0;
-    position: absolute;
-    right:50%;
-    top:10%;
-    .catass-close {
-      position: absolute;
-      text-decoration:none;
-    }
-
+.wrap {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .list {
   }
 }
 
-.cathand {
-    height:auto;
-    width:50%; 
+.full-screen {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  .catass {
     padding: 0;
-    margin:0;
+    margin: 0;
     position: absolute;
-    right:-100%;
-    top:70%;
+    right: 0%;
+    top: 0%;
+    .catass-close {
+      color: #f00;
+      background-color: #000;
+      position: absolute;
+      top: 30%;
+      right: 30%;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      line-height: 30px;
+      text-decoration: none;
+    }
+  }
 }
-
 </style>
