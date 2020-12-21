@@ -45,6 +45,7 @@ $(document).ready(() => {
   });
 });
 
+//處理cathand動畫
 $(window).scroll(function () {
   var window_height = $(window).height();
   var window_scrollTop = $(window).scrollTop();
