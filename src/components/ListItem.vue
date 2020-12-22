@@ -113,12 +113,13 @@ export default {
       background-color: #000;
       position: absolute;
       top: 30%;
-      right: 30%;
-      width: 30px;
-      height: 30px;
+      right: 10%;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
       text-align: center;
-      line-height: 30px;
       text-decoration: none;
+      // opacity: 0;
     }
   }
 }
