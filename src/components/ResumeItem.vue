@@ -18,17 +18,24 @@ export default {
       url: "https://abelx85c.github.io/resume/",
     };
   },
-  mounted() {
-    /**
-     * iframe-寬高自適應顯示
-     */
-    const oIframe = document.getElementById("myFrame");
-    const deviceWidth = document.documentElement.clientWidth;
-    const deviceHeight = document.documentElement.clientHeight;
-    oIframe.style.width = Number(deviceWidth) - 0 + "px"; //數字是頁面佈局寬度差值 50
-    oIframe.style.height = Number(deviceHeight) - 0 + "px"; //數字是頁面佈局高度差 120
+  methods: {
+    resizeHandler() {
+      //console.log("resize");
+      //iframe-寬高自適應顯示
+      const oIframe = document.getElementById("myFrame");
+      const deviceWidth = document.documentElement.clientWidth;
+      const deviceHeight = document.documentElement.clientHeight;
+      oIframe.style.width = Number(deviceWidth) - 0 + "px"; //數字是頁面佈局寬度差值 50
+      oIframe.style.height = Number(deviceHeight) - 0 + "px"; //數字是頁面佈局高度差 120
+    },
   },
-  methods: {},
+  mounted() {
+    this.resizeHandler();
+    window.addEventListener("resize", this.resizeHandler);
+  },
+  beforeDestroy() {
+    window.removeEventListener("resize", this.resizeHandler);
+  },
 };
 </script>
 
