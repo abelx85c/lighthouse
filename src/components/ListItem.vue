@@ -26,6 +26,11 @@
         <a href="#" class="catass-close">X</a>
       </div>
     </div>
+    <div class="full-screen2">
+      <div class="cathand">
+        <img src="@/assets/image/icon/cathand.png" alt="" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -45,22 +50,6 @@ $(document).ready(() => {
   });
 });
 
-//處理cathand動畫
-$(window).scroll(function () {
-  var window_height = $(window).height();
-  var window_scrollTop = $(window).scrollTop();
-  var document_height = $(document).height();
-
-  if (window_height + window_scrollTop == document_height) {
-    $(".cathand").animate(
-      {
-        right: "0",
-      },
-      500
-    );
-  }
-});
-
 export default {
   data: () => ({}),
   computed: {
@@ -68,8 +57,30 @@ export default {
       return this.$store.state.contents;
     },
   },
+  methods: {
+    scrollHandler() {
+      console.log("scroll");
+      //處理cathand動畫
+      var window_height = $(window).height();
+      var window_scrollTop = $(window).scrollTop();
+      var document_height = $(document).height();
+      //當視窗華到底時
+      if (window_height + window_scrollTop == document_height) {
+        $(".cathand").animate(
+          {
+            right: "-10%",
+          },
+          1000
+        );
+      }
+    },
+  },
   mounted() {
     this.$store.dispatch("CONTENTS_READ");
+    window.addEventListener("scroll", this.scrollHandler);
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.scrollHandler);
   },
 };
 </script>
@@ -110,5 +121,12 @@ export default {
       text-decoration: none;
     }
   }
+}
+.cathand {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  right: -100%;
+  bottom: 10%;
 }
 </style>
