@@ -14,11 +14,11 @@ const routes = [
     path: '/',
     name: 'layout',
     component: () => import('@/layout'),
-    redirect: '/lighthouse',
+    redirect: '/home',
     children: [
       {
-        path: 'lighthouse',
-        name: 'lighthouse',
+        path: 'home',
+        name: 'home',
         component: () => import('@/views/ListPage.vue'),
       },
       {
