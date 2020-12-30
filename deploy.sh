@@ -15,6 +15,7 @@ git commit -m 'deploy'
 
 # 部署到 https://<USERNAME>.github.io/<REPO>
 # 將dist資料夾中的內容推送至遠端eric-project的gh-pages分支中，並強制無條件將舊有的內容取代成目前的內容（指令 git push -f)
-git push -f git@github.com:abelx85c/lighthouse.git master:gh-pages
+# git push -f git@github.com:abelx85c/lighthouse.git master:gh-pages
+git push -f https://github.com/abelx85c/lighthouse.git master:gh-pages
 
 cd -
